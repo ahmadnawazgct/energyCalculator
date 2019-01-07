@@ -1,0 +1,68 @@
+<div id="myCalculator">
+    <main>
+        <section class="led">
+            <div>
+              <h4>LED</h4>
+              <p>{{ledWattage}}</p>
+              <p>{{ledCost}}</p>
+            </div>
+        </section>
+        <section class="cfl">
+            <div>
+              <h4>CFL</h4>
+              <p>{{cflWattage}}</p>
+              <p>{{cflCost}}</p>
+            </div>
+          </section>
+        <section class="hal">
+              <div>
+                <h4>Halogen</h4>
+                <p>{{halWattage}}</p>
+                <p>{{halCost}}</p>
+              </div>
+            </section>
+      <section class="inc">
+        <div>
+          <h4>Incandescand</h4>
+          <p>{{incWattage}}</p>
+          <p>{{incCost}}</p>
+        </div>
+      </section>
+      
+      
+      
+     <form class="form">
+      <div>
+        <h4>Lumens</h4>
+        <p>Brightness <br>of bulb</p>
+        <select 
+        [(ngModel)]="currentLumens"
+        (ngModelChange)="calculate($event)" 
+        name="temp">
+          <option *ngFor="let options of lumenOptions" [value]="options">{{options}}</option>
+        </select>
+      </div>
+      <div>
+        <h4>KWh</h4>
+        <p>Kilowatt-<br>hour cost</p>
+        <input type="number"
+         name="currentCost" 
+         [(ngModel)]="currentCost"
+         (ngModelChange)="calculate($event)" 
+         value={{currentCost}}
+        >cents
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Usage <br>per day</p>
+        <input type="number"
+         name="currentHours"
+         [(ngModel)]="currentHours" 
+         (ngModelChange)="calculate($event)"
+         value={{currentHours}}
+         >
+      </div>
+    </form>
+  </main>
+</div>
+  
