@@ -1,4 +1,5 @@
 # EnergyCalculator
+Initially this project was built by Chris Converse at Lynda.com in AngularJS 1. I reproduced it with minor changes in Angular 6.1.4. hence every thign is changed. My apoloyg for Chris.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
